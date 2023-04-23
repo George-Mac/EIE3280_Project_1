@@ -2,7 +2,7 @@
 
 ## Search Engine Optimization
 
-#### Nanxuan Li 120090860@link.cuhk.edu.cn
+#### Nanxuan Li 120090860@link.cuhk.edu.cn (Team Leader)
 
 #### Zhenkun Huo 120090822@link.cuhk.edu.cn
 
