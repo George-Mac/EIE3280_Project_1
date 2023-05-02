@@ -2,18 +2,36 @@ import numpy as np
 import scipy.stats as ss
 
 theta = 0.85
-N = eval(input("Enter number of nodes:"))
+def read_data_from_terminal():
+    out_link = []
+    N = eval(input("Enter number of nodes:"))
+    out_link = []
+    for i in range(N):
+        out = input()
+        out = out.split()
+        for j in range(len(out)):
+            out[j] = eval(out[j])
+        out_link.append(out)
+    return N, out_link
+
+def read_data_from_txt(filename):
+    out_link = []
+    with open(filename) as txt_f:
+        N = eval(txt_f.readline())
+        for j in range(N):
+            out = txt_f.readline()
+            out = out.split()
+            for k in range(len(out)):
+                out[k] = eval(out[k])
+            out_link.append(out)
+    return N, out_link
+
+N, out_link = read_data_from_txt("simulate_data/structure1.txt")
+
 pi_0 = []
 for i in range(N):
     pi_0.append(1/N)
 
-out_link = []
-for i in range(N):
-    out = input()
-    out = out.split()
-    for j in range(len(out)):
-        out[j] = eval(out[j])
-    out_link.append(out)
     
 # out_link = [[2],
             # [2],
